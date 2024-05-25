@@ -1,0 +1,196 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing this theme as much as we did for
+  developing it. We have put a lot of work to make this theme as developer friendly as possible by offering you
+  hooks to integrate into critical parts of the theme. You will find the complete technical documentation (including
+  all events, dependencies...) in the "custom.js" file, located in the Assets folder.
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<!doctype html>
+
+{%- assign direction = 'ltr' -%}
+{%- case request.locale.iso_code -%}
+  {%- when 'ar' or 'arc' or 'dv' or 'fa' or 'ha' or 'he' or 'kwh' or 'ks' or 'ku' or 'ps' or 'ur' or 'yi' -%}
+    {%- assign direction = 'rtl' -%}
+{%- endcase -%}
+
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ direction }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="{{ settings.header_background }}">
+
+    <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% endif %}</title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '96x96' }}" type="image/png">
+    {%- endif -%}
+
+    {%- comment -%}Few prefech to increase performance on commonly used third-parties{%- endcomment -%}
+    <link rel="preconnect" href="https://cdn.shopify.com">
+    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+    {%- unless settings.heading_font.system? and settings.text_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    {%- comment -%}Preload important resources{%- endcomment -%}
+    <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
+    <link rel="preload" as="script" href="{{ 'vendor.js' | asset_url }}">
+    <link rel="preload" as="script" href="{{ 'theme.js' | asset_url }}">
+
+    {%- comment -%}
+      IMPLEMENTATION NOTE: for improving performance, Focal tries to preload images on known pages (such as blog page,
+      product or collection pages). In order to keep a main JS file size minimal, the theme also lazyloads non-essential
+      libraries (such as PhotoSwipe or Flickity) and only loads them on demand.
+    {%- endcomment -%}
+    {%- if request.page_type == 'product' -%}
+      {%- assign selected_media = product.selected_variant.featured_media | default: product.featured_media -%}
+
+      <link rel="preload" as="fetch" href="{{ product.url }}.js" crossorigin>
+
+      {%- if product.media.size > 1 -%}
+        <link rel="preload" as="script" href="{{ 'flickity.js' | asset_url }}">
+      {%- endif -%}
+    {%- endif -%}
+
+    {% render 'social-meta-tags' %}
+    {% render 'microdata-schema' %}
+    {% render 'css-variables', direction: direction %}
+    {% render 'js-variables', direction: direction %}
+
+    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+
+    <script src="{{ 'vendor.js' | asset_url }}" defer></script>
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    <script src="{{ 'custom.js' | asset_url }}" defer></script>
+
+    {{ content_for_header }}
+
+    <style>
+      #sy-whatshelp {
+   right: 25px;
+   bottom: 25px;
+   position: fixed;
+   z-index: 1;
+}
+
+#sy-whatshelp a.sywh-open-services {
+  background-color: #25d366;
+  color: #fff;
+  line-height: 55px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 33px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  box-shadow: 2px 2px 8px -3px #000;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  display: inline-block;
+}
+
+#sy-whatshelp a.sywh-open-services i {
+  line-height: 55px;
+}
+    </style>
+  </head>
+
+  {%- assign feature_classes = '' -%}
+
+  {%- if settings.show_image_zoom -%}
+    {% assign feature_classes = feature_classes | append: ' features--image-zoom' %}
+  {%- endif -%}
+
+  <body class="no-focus-outline {{ feature_classes }}" data-instant-allow-query-string>
+    {%- comment -%}Common SVG definitions that we are re-using in several places{%- endcomment -%}
+    <svg class="visually-hidden">
+      <linearGradient id="rating-star-gradient-half">
+        <stop offset="50%" stop-color="rgb(var(--product-star-rating))" />
+        <stop offset="50%" stop-color="rgb(var(--product-star-rating))" stop-opacity="0.4" />
+      </linearGradient>
+    </svg>
+
+    <a href="#main" class="visually-hidden skip-to-content">{{ 'general.accessibility.skip_to_content' | t }}</a>
+    <loading-bar class="loading-bar"></loading-bar>
+
+    {%- if request.page_type != 'gift_card' and request.page_type != 'password' -%}
+      {%- sections 'header-group' -%}
+      {%- sections 'overlay-group' -%}
+
+      {%- unless settings.cart_type == 'page' or request.page_type == 'cart' -%}
+        {%- section 'mini-cart' -%}
+      {%- endunless -%}
+    {%- endif -%}
+
+    <div id="main" role="main" class="anchor">
+      {%- comment -%}
+      IMPLEMENTATION NOTE: on collection and search page, the theme was designed to show on mobile the filter bar and/or sort
+        by at the very top of the page. However, due to the fact that sections are isolated, I had to move the code
+        here. Then, the collection section, based on the selected settings, will eventually hide those elements in CSS
+      {%- endcomment -%}
+      {%- if request.page_type == 'collection' or request.page_type == 'search' -%}
+        {%- assign active_filters_count = 0 -%}
+
+        {%- if request.page_type == 'collection' -%}
+          {%- assign filters = collection.filters -%}
+        {%- else -%}
+          {%- assign filters = search.filters -%}
+        {%- endif -%}
+
+        {%- for filter in filters -%}
+          {%- if filter.type == 'list' -%}
+            {%- assign active_filters_count = active_filters_count | plus: filter.active_values.size -%}
+          {%- elsif filter.type == 'price_range' and filter.min_value.value or filter.max_value.value -%}
+            {%- assign active_filters_count = active_filters_count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- assign is_toolbar_collapsed = false -%}
+
+        {%- if request.page_type == 'search' and search.results.first.object_type != 'product' and search.results_count > 0 -%}
+          {%- assign is_toolbar_collapsed = true -%}
+        {%- endif -%}
+
+        <div id="mobile-facet-toolbar" class="mobile-toolbar {% if is_toolbar_collapsed %}is-collapsed{% endif %} hidden-lap-and-up">
+          <button is="toggle-button" class="mobile-toolbar__item mobile-toolbar__item--filters {% if active_filters_count > 0 %}has-filters{% endif %}" aria-expanded="false" aria-controls="facet-filters" style="display: none">
+            {%- render 'icon' with 'filters' -%}
+            <span class="mobile-toolbar__item-label">{{- 'collection.general.filters' | t -}}</span>
+          </button>
+
+          <button is="toggle-button" class="mobile-toolbar__item mobile-toolbar__item--sort" aria-expanded="false" aria-controls="sort-by-popover" style="display: none">
+            <span class="mobile-toolbar__item-label">{{- 'collection.general.sort_by' | t -}}</span>
+            {%- render 'icon' with 'chevron' -%}
+          </button>
+        </div>
+      {%- endif -%}
+
+      {{ content_for_layout }}
+
+      <div id="sy-whatshelp">
+  <a href="https://api.whatsapp.com/send?phone=917300044750" target="_blank" class="sywh-open-services " data-html="true" data-placement="left">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="36" height="36"
+viewBox="0 0 48 48"
+style=" fill:#000000;margin-top: 10px;"><path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path></svg>
+   </a>        
+</div>
+    </div>
+
+    {%- if request.page_type != 'gift_card' and request.page_type != 'password' -%}
+      {%- sections 'footer-group' -%}
+    {%- endif -%}
+  </body>
+</html>
