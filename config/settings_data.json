@@ -4,14 +4,15 @@
     "block_border_radius": "small",
     "heading_color": "#1a1a1a",
     "text_color": "#1a1a1a",
+    "background": "#fcf7f0",
     "secondary_background": "#f5f1ec",
     "success_color": "#2e9e7b",
     "error_color": "#de2a2a",
-    "header_background": "#56112a",
+    "header_background": "#1a1a1a",
     "header_text_color": "#ffffff",
-    "footer_background": "#56112a",
+    "footer_background": "#1a1a1a",
     "footer_text_color": "#ffffff",
-    "primary_button_background": "#56112a",
+    "primary_button_background": "#1a1a1a",
     "primary_button_text_color": "#ffffff",
     "secondary_button_background": "#f7aea6",
     "secondary_button_text_color": "#56112a",
@@ -36,7 +37,22 @@
     "checkout_sidebar_background_color": "#f6f3ed",
     "checkout_accent_color": "#353535",
     "checkout_button_color": "#353535",
-    "checkout_error_color": "#de2a2a"
+    "checkout_error_color": "#de2a2a",
+    "sections": {
+      "mini-cart": {
+        "type": "mini-cart",
+        "settings": {
+          "show_order_note": true,
+          "show_checkout_button": true,
+          "empty_button_link": "shopify:\/\/collections\/all",
+          "show_recommendations": true,
+          "recommendations_title": "You may also like"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Carbon": {
