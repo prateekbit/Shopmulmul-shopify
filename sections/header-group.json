@@ -60,10 +60,38 @@
             "image_6_text": "",
             "image_6_link": ""
           }
+        },
+        "mega_menu_4XW9qa": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Collection",
+            "images_position": "right",
+            "image_1": "shopify:\/\/shop_images\/2_16b61a9e-678b-4efb-b5e6-5f25c9a3859f.png",
+            "image_1_heading": "Garmi Ke Din",
+            "image_1_text": "",
+            "image_1_link": "shopify:\/\/collections\/garmi-ke-din",
+            "image_2": "shopify:\/\/shop_images\/4_24c6e29c-f8e4-4160-adf9-2f249120a72e.png",
+            "image_2_heading": "Summer Wedding",
+            "image_2_text": "",
+            "image_2_link": "shopify:\/\/collections\/ss24",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
         }
       },
       "block_order": [
-        "mega_menu_3inRnB"
+        "mega_menu_3inRnB",
+        "mega_menu_4XW9qa"
       ],
       "settings": {
         "enable_sticky_header": true,
