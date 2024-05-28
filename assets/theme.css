@@ -1359,7 +1359,7 @@ p a:not(.button), .rte a:not(.button), .link {
 
 @media screen and (min-width: 1000px) {
   .section__header {
-    margin-block-end: min(48px, var(--vertical-breather));
+    margin-block-end: min(20px, var(--vertical-breather));
   }
 
   .section__footer {
