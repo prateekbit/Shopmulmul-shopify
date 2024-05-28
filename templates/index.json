@@ -55,10 +55,11 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify:\/\/shop_images\/image_70.png",
             "subheading": "",
             "title": "",
-            "link_text": "",
-            "link_url": "",
+            "link_text": "BESTSELLERS",
+            "link_url": "shopify:\/\/collections\/best-sellers",
             "text_color": "rgba(0,0,0,0)",
             "overlay_color": "#000000",
             "overlay_opacity": 30
@@ -68,10 +69,11 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify:\/\/shop_images\/image_70.png",
             "subheading": "",
             "title": "",
-            "link_text": "",
-            "link_url": "",
+            "link_text": "KURTA SET",
+            "link_url": "shopify:\/\/collections\/kurta-sets",
             "text_color": "rgba(0,0,0,0)",
             "overlay_color": "#000000",
             "overlay_opacity": 30
@@ -81,9 +83,10 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify:\/\/shop_images\/image_70.png",
             "subheading": "",
             "title": "",
-            "link_text": "",
+            "link_text": "KURTA SET",
             "link_url": "",
             "text_color": "rgba(0,0,0,0)",
             "overlay_color": "#000000",
