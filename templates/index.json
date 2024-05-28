@@ -332,11 +332,26 @@
             "overlay_color": "#000000",
             "overlay_opacity": 30
           }
+        },
+        "collection_Hk88cV": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "",
+            "link_text": "",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
         }
       },
       "block_order": [
         "collection_xLHAAC",
-        "collection_zzxkhm"
+        "collection_zzxkhm",
+        "collection_Hk88cV"
       ],
       "disabled": true,
       "settings": {
@@ -344,6 +359,111 @@
         "layout": "grid",
         "subheading": "",
         "title": "Collection list",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "collection_list_VFgQFN": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_kH8iBP": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/fff_3.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "shop now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_GCGde4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/fff_3.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "shop now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_AgnEAQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/fff_3.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "shop now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_hPNGpd": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/fff_3.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "shop now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_FDAx3Y": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/fff_3.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "shop now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_fWkjmX": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/fff_3.jpg",
+            "subheading": "",
+            "title": "",
+            "link_text": "shop now",
+            "link_url": "",
+            "text_color": "rgba(0,0,0,0)",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_kH8iBP",
+        "collection_GCGde4",
+        "collection_AgnEAQ",
+        "collection_hPNGpd",
+        "collection_FDAx3Y",
+        "collection_fWkjmX"
+      ],
+      "settings": {
+        "reveal_on_scroll": false,
+        "layout": "carousel",
+        "subheading": "",
+        "title": "",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
@@ -356,6 +476,7 @@
     "rich_text_BXDLjm",
     "new_collection_list_8xyFPm",
     "shop-the-look",
-    "collection_list_ck8jHe"
+    "collection_list_ck8jHe",
+    "collection_list_VFgQFN"
   ]
 }
