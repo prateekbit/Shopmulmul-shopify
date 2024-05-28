@@ -339,7 +339,7 @@
       "settings": {
         "reveal_on_scroll": true,
         "layout": "grid",
-        "subheading": "Subheading",
+        "subheading": "",
         "title": "Collection list",
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
