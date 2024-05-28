@@ -11,7 +11,12 @@ span.heading.heading--small.link.button.button--primary {
 }
 
 span.heading.heading--small.link.button.button--primary:hover{
-  background-position: 100% 25%, 100% 100%;
+ background-image: linear-gradient(178deg, rgb(var(--button-background)), rgb(var(--button-background)) 10%, #00000012 10% 100%), linear-gradient(rgb(var(--button-background)), rgb(var(--button-background)));
+        background-position: 100% -100%, 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 200%, 100% 100%;
+        transition: background-position .3s cubic-bezier(.215,.61,.355,1);
+        transform: translateZ(0);
 }
 
 
