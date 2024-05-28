@@ -127,7 +127,7 @@
         "navigation_menu": "new-menu",
         "sidebar_navigation_menu": "",
         "header_layout": "logo_left_navigation_center",
-        "show_icons": false,
+        "show_icons": true,
         "reduce_desktop_padding": false,
         "show_locale_selector": true,
         "show_country_selector": false,

@@ -3,12 +3,12 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "slide-1": {
+        "image_mmFMbM": {
           "type": "image",
           "settings": {
             "text_position": "middle_center",
             "subheading": "Tell your story",
-            "title": "Slide 1",
+            "title": "Slide title",
             "button_1_text": "",
             "button_1_link": "",
             "button_2_text": "",
@@ -22,7 +22,7 @@
         }
       },
       "block_order": [
-        "slide-1"
+        "image_mmFMbM"
       ],
       "settings": {
         "section_height": "auto",
