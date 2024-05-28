@@ -337,7 +337,7 @@
         "collection_zzxkhm"
       ],
       "settings": {
-        "reveal_on_scroll": false,
+        "reveal_on_scroll": true,
         "layout": "grid",
         "subheading": "Subheading",
         "title": "Collection list",
