@@ -10,7 +10,9 @@ span.heading.heading--small.link.button.button--primary {
    line-height:48px;
 }
 
-
+span.heading.heading--small.link.button.button--primary:hover{
+  background-position: 100% 25%, 100% 100%;
+}
 
 
 /* ----------------custom css end-------------------------- */
