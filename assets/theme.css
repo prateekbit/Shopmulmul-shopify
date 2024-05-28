@@ -1,6 +1,9 @@
 /* -------------custom css start------------------ */
 
-
+.list-collections__item-info.text-container.list-info {
+    bottom: 0;
+    top: auto;
+}
 
 
 
