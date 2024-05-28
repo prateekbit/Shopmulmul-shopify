@@ -4,7 +4,10 @@
     bottom: 0;
     top: auto;
 }
-
+span.button.button--primary {
+    color: black;
+    background: white;
+}
 
 
 
