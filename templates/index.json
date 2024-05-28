@@ -6,10 +6,12 @@
         "image_mmFMbM": {
           "type": "image",
           "settings": {
-            "text_position": "middle_center",
-            "subheading": "Tell your story",
-            "title": "Slide title",
-            "button_1_text": "",
+            "image": "shopify:\/\/shop_images\/image_67.png",
+            "mobile_image": "shopify:\/\/shop_images\/fff_72.png",
+            "text_position": "bottom_center",
+            "subheading": "",
+            "title": "NEW ARRIVALS",
+            "button_1_text": "DISCOVER NOW",
             "button_1_link": "",
             "button_2_text": "",
             "button_2_link": "",
