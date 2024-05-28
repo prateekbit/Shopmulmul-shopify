@@ -143,6 +143,24 @@
         "background": "rgba(0,0,0,0)"
       }
     },
+    "rich_text_BXDLjm": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "",
+        "title": "RAKHI EDIT",
+        "content": "<p>This Mother's Day, let us pay homage to the women who have shaped our lives with their boundless love and unwavering support. Let us celebrate their timeless beauty, inner strength, and indomitable spirit. And above all, let us honor them with the gift of elegance and sophistication, for they deserve nothing less than the very best.<\/p>",
+        "button_text": "",
+        "button_link": "",
+        "background_type": "full_width",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
     "featured-collections": {
       "type": "featured-collections",
       "blocks": {
@@ -494,6 +512,7 @@
     "slideshow",
     "collection-list",
     "slideshow_pQjUw8",
+    "rich_text_BXDLjm",
     "featured-collections",
     "image-with-text",
     "shop-the-look",
