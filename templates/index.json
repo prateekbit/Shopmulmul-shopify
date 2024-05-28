@@ -338,6 +338,7 @@
         "collection_xLHAAC",
         "collection_zzxkhm"
       ],
+      "disabled": true,
       "settings": {
         "reveal_on_scroll": true,
         "layout": "grid",
