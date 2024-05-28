@@ -4,6 +4,10 @@
     bottom: 0;
     top: auto;
 }
+span.heading.heading--small.link.button.button--primary {
+    background: #ffff;
+    color: black;
+}
 
 
 
