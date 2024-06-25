@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "type": "header",
   "name": "Header group",
@@ -73,7 +82,7 @@
             "image_2": "shopify:\/\/shop_images\/4_24c6e29c-f8e4-4160-adf9-2f249120a72e.png",
             "image_2_heading": "Summer Wedding",
             "image_2_text": "",
-            "image_2_link": "shopify:\/\/collections\/ss24",
+            "image_2_link": "shopify:\/\/collections\/summer-wedding",
             "image_3_heading": "",
             "image_3_text": "",
             "image_3_link": "",
