@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header group",
@@ -48,14 +48,14 @@
           "settings": {
             "menu_item": "Shop",
             "images_position": "right",
-            "image_1": "shopify:\/\/shop_images\/2_47efa5f2-3354-4bee-9ddb-7b4eef749d7a.jpg",
+            "image_1": "shopify://shop_images/2_47efa5f2-3354-4bee-9ddb-7b4eef749d7a.jpg",
             "image_1_heading": "Kurta Sets",
             "image_1_text": "",
-            "image_1_link": "shopify:\/\/collections\/kurta-sets",
-            "image_2": "shopify:\/\/shop_images\/4_1acc872b-8c91-42fb-85da-02838a5e3f09.jpg",
+            "image_1_link": "shopify://collections/kurta-sets",
+            "image_2": "shopify://shop_images/4_1acc872b-8c91-42fb-85da-02838a5e3f09.jpg",
             "image_2_heading": "Lehengas",
             "image_2_text": "",
-            "image_2_link": "shopify:\/\/collections\/lehenga",
+            "image_2_link": "shopify://collections/lehenga",
             "image_3_heading": "",
             "image_3_text": "",
             "image_3_link": "",
@@ -75,14 +75,14 @@
           "settings": {
             "menu_item": "Collection",
             "images_position": "right",
-            "image_1": "shopify:\/\/shop_images\/2_16b61a9e-678b-4efb-b5e6-5f25c9a3859f.png",
+            "image_1": "shopify://shop_images/2_16b61a9e-678b-4efb-b5e6-5f25c9a3859f.png",
             "image_1_heading": "Garmi Ke Din",
             "image_1_text": "",
-            "image_1_link": "shopify:\/\/collections\/garmi-ke-din",
-            "image_2": "shopify:\/\/shop_images\/4_24c6e29c-f8e4-4160-adf9-2f249120a72e.png",
+            "image_1_link": "shopify://collections/garmi-ke-din",
+            "image_2": "shopify://shop_images/4_24c6e29c-f8e4-4160-adf9-2f249120a72e.png",
             "image_2_heading": "Summer Wedding",
             "image_2_text": "",
-            "image_2_link": "shopify:\/\/collections\/summer-wedding",
+            "image_2_link": "shopify://collections/shaadi-ka-ghar",
             "image_3_heading": "",
             "image_3_text": "",
             "image_3_link": "",
